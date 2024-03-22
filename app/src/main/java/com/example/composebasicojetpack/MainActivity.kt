@@ -234,7 +234,8 @@ fun HomeSection(
 fun HomeScreen(modifier: Modifier = Modifier) {
     Column(
         modifier
-            .verticalScroll(rememberScrollState())
+        //esto es para q se haga scrolable,solo el hilol principal puede ser scrolable o solo el un hilo secundfario, no los 2
+            //.verticalScroll(rememberScrollState())
     ) {
         Spacer(Modifier.height(16.dp))
         SearchBar(Modifier.padding(horizontal = 16.dp))
@@ -245,7 +246,9 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             FavoriteCollectionsGrid()
         }
         Spacer(Modifier.height(16.dp))
-        MyApp(Modifier.padding(6.dp))
+        //MyApp(Modifier.padding(6.dp))
+        WellnessScreen()
+
     }
 }
 
